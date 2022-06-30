@@ -1,3 +1,18 @@
+
+:root{
+--SoftRed: hsl(7, 99%, 70%);
+--Yellow: hsl(51, 100%, 49%);
+--DarkDesaturatedCyan: hsl(167, 40%, 24%);
+--DarkBlue: hsl(198, 62%, 26%);
+--DarkModerateCyan: hsl(168, 34%, 41%);
+--VeryDarkDesaturatedBlue: hsl(212, 27%, 19%);
+--VeryDarkGrayishBlue: hsl(213, 9%, 39%);
+--DarkGrayishBlue: hsl(232, 10%, 55%);
+--GrayishBlue: hsl(210, 4%, 67%);
+--White: hsl(0, 0%, 100%);
+}
+
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -16,7 +31,7 @@ header{
     background-size: 100% 100%;
     text-align: center;
     color: white;
-    height: 100vh;
+    height: 500PX;
     width: 100vw;
 }
 
@@ -30,12 +45,13 @@ nav >img{
 }
 header > h2{
     align-self: center;
-    padding: 90px;
+    padding: px;
     font-family: Fraunces;
     font-weight: 900;
     text-transform: uppercase;
     font-size: 50px;
-    margin-top: 10px;
+    margin-top: 40px;
+    
     word-spacing: 5px;
 }
 
@@ -63,7 +79,7 @@ header > h2{
     color: white;
 }
 .active{
-    color:  hsl(212, 27%, 19%);
+    color: var(--VeryDarkDesaturatedBlue);
     padding: 15px;
     text-transform: uppercase;
     font-family: Fraunces;
@@ -71,9 +87,14 @@ header > h2{
     background-color: #fff;
     border-radius: 40px;
 }
+.active:hover{
+    background-color: var(--DarkBlue);
+    color: var(--White);
+}
 
 .arrow{
     align-self: center;
+    margin-top: 30PX;
 }
 /* main styling */
 main{
@@ -97,6 +118,8 @@ main{
     margin-bottom: 50PX;
     /* padding-right: 70Px; */
     margin-left: 80px;
+    color: var(--VeryDarkDesaturatedBlue);
+    font-weight: 900;
     
 }
 .transform-unit > div > P, .standout-unit > div > p{
@@ -104,15 +127,27 @@ main{
     font-family: barlow;
     line-height: 1.5;
     margin-left: 80px;
+    color: var(--DarkGrayishBlue);
     /* margin: 30px 10px; */
 }
 .transform-unit > div > a{
     margin-left: 80px;
     padding-top: 30px;
+    color: var(--VeryDarkDesaturatedBlue);
+    font-family: fraunces;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+  
 }
 .standout-unit > div > a{
     margin-left: 80px;
     padding-top: 30px;
+    color: var(--VeryDarkDesaturatedBlue);
+    font-family: fraunces;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
 }
 .transform-image{
     background-image: url("./images/desktop/image-transform.jpg");
@@ -132,6 +167,7 @@ main{
     text-align: center;
     background-repeat: no-repeat;
     background-size: 100% 100%;
+    color: var(--DarkDesaturatedCyan);
   
 }
 .graphic-unit > div> h2, .photography-unit>div> h2{
@@ -152,6 +188,8 @@ main{
     text-align: center;
     background-repeat: no-repeat;
     background-size: 100% 100%;
+    color: var(--DarkBlue);
+
 }
 
 /* section styling */
@@ -164,11 +202,14 @@ section > h2{
     padding-top: 40px;
     padding-bottom: 30px;
     text-transform: uppercase;
+    color: var(--GrayishBlue);
+    opacity: .7;
 }
 .testimonial-container{
     padding: 30px 40px 30px 40px;
     display: flex;
-    gap: 10px;
+    gap: 20px;
+
 }
 .client-image{
     border-radius: 50%;
@@ -179,14 +220,19 @@ section > h2{
     margin-bottom: 40px;
     line-height: 1.5;
     font-family: barlow;
+    color: var(--VeryDarkGrayishBlue);
 }
 .client-name{
-    margin-bottom: 30px;
-    
+    margin-bottom: 20px;
+    font-family: fraunces;
+    color: var(--VeryDarkDesaturatedBlue);    
 }
 .client-position{
     font-family: barlow;
     font-size: 16px;
+    color: var(--VeryDarkGrayishBlue);
+    opacity: 0.5;
+    font-size: 14px;
 }
 
 /* Aside */
@@ -236,19 +282,29 @@ footer > ul{
     margin-top: 30px;
     list-style: none;
     margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-footer >ul>li{
-    display: inline;
+footer >ul > li{
     margin-right: 30px;
 }
+
 .footer-link{
     text-decoration: none;
     color: hsl(167, 40%, 24%);
     font-family: barlow;
+}
+.footer-link:hover{
+    color: var(--White);
 }
 footer > div {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 30px;
+}
+i:hover{
+    color: var(--White);
+    cursor: pointer;
 }
