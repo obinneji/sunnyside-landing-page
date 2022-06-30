@@ -19,11 +19,11 @@
     /* outline: 1px solid red; */
     
 }
-BODY{
+body{
     font-size: 18PX;
     font-family: 'Barlow', sans-serif;
 font-family: 'Fraunces', serif;
-width: 100vw;
+width: 100%;
 }
 header{
     background: url("images/desktop/image-header.jpg");
@@ -31,30 +31,20 @@ header{
     background-size: 100% 100%;
     text-align: center;
     color: white;
-    height: 500PX;
+    height: 700PX;
     width: 100vw;
+
 }
 
 nav{
     display: flex;
     padding-top: 40px;
-    
+    padding-bottom: 10px;
+    margin-bottom: 7rem;
 }
 nav >img{
     margin-left: 20px;
 }
-header > h2{
-    align-self: center;
-    padding: px;
-    font-family: Fraunces;
-    font-weight: 900;
-    text-transform: uppercase;
-    font-size: 50px;
-    margin-top: 40px;
-    
-    word-spacing: 5px;
-}
-
 .nav-items{
     margin-left: auto;
 }
@@ -91,11 +81,50 @@ header > h2{
     background-color: var(--DarkBlue);
     color: var(--White);
 }
+.hambuger-icon{
+    display: none;
+}
+
+header > h2{
+    align-self: center;
+    padding: px;
+    font-family: Fraunces;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 50px;
+    margin-top: 70px;
+    padding-top: 20PX;
+    word-spacing: 5px;
+}
+
+
 
 .arrow{
     align-self: center;
-    margin-top: 30PX;
+    margin-top: 40PX;
 }
+
+/*mobile view styling */
+@media (max-width: 600px) {
+    .hambuger-icon{
+        display: block;
+        position: absolute;
+        top: 42px;
+        right: 50px;
+    }
+    .nav-items{
+        display: none;
+        background-color: #fff;
+        width: 80px;
+        
+    }
+    
+    .active{
+        background-color: var(--Yellow);
+    }
+
+}
+
 /* main styling */
 main{
     display: grid;
@@ -138,8 +167,22 @@ main{
     font-weight: 700;
     text-decoration: none;
     text-transform: uppercase;
+    position: absolute;
   
 }
+.transform-unit > div > a > hr{
+  width: 130px;
+  background-color: var(--SoftRed);
+  height: 5px;
+  position: relative;
+  bottom: 5px;
+   border: none;
+   opacity: 0.4;
+}
+.transform-unit > div > a > hr:hover{
+    opacity: 1;
+}
+
 .standout-unit > div > a{
     margin-left: 80px;
     padding-top: 30px;
@@ -148,8 +191,22 @@ main{
     font-weight: 700;
     text-decoration: none;
     text-transform: uppercase;
+    position: absolute;
 }
-.transform-image{
+.standout-unit > div > a > hr{
+    width: 130px;
+    background-color: var(--Yellow);
+    height: 5px;
+    position: relative;
+    bottom: 5px;
+     border: none;
+     opacity: 0.4;
+  }
+  .standout-unit > div > a > hr:hover{
+      opacity: 1;
+  }
+  
+  .transform-image{
     background-image: url("./images/desktop/image-transform.jpg");
     background-size: 100%  100%;
 
@@ -190,6 +247,33 @@ main{
     background-size: 100% 100%;
     color: var(--DarkBlue);
 
+}
+@media (max-width: 600px) {
+    main{
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(6, 1fr);
+    }
+    .transform-unit{
+        text-align: center;
+    }
+    .standout-unit{
+        text-align: center;
+    }
+    .graphic-unit{
+        background-image: url("./images/mobile/image-graphic-design.jpg");
+    }
+    .photography-unit{
+        background-image: url("./images/mobile/image-photography.jpg");
+    }
+    .transform-image{
+        background-image: url("./images/mobile/image-transform.jpg");
+        background-size: 100%  100%;
+        grid-row: 1/2;
+
+    }
+    .standout-image{
+        background-image: url('./images/mobile/image-stand-out.jpg');
+    }
 }
 
 /* section styling */
@@ -238,12 +322,19 @@ section > h2{
 /* Aside */
 aside{
     display: flex;
-    flex-basis: 30%;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
 }
 aside > div{
-    width: 30%;
-    height: 500px;
+    width: 25%;
+    height: 400px;
+}
+@media (max-width: 600px) {
+    aside > div{
+        width: 50%;
+    }
+    .testimonial-container{
+        flex-direction: column;
+    }
 }
 .gallery:nth-child(1){
     background-image: url("/images/desktop/image-gallery-milkbottles.jpg");
@@ -304,7 +395,10 @@ footer > div {
     justify-content: center;
     gap: 30px;
 }
-i:hover{
+ion-icon{
+    color: var(--DarkModerateCyan);
+}
+ion-icon:hover{
     color: var(--White);
     cursor: pointer;
 }
