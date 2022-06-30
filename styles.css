@@ -16,7 +16,7 @@
 *{
     box-sizing: border-box;
     margin: 0;
-    /* outline: 1px solid red; */
+    outline: 1px solid red;
     
 }
 body{
@@ -138,15 +138,13 @@ main{
     justify-content: center;
 }
 .transform-unit > div, .standout-unit > div{
-    padding: 100PX;
+    padding: 100px;
 }
 .transform-unit > div > h2, .standout-unit > div > h2{
     font-weight: 900;
     font-family: fraunces;
     font-size: 40px;
     margin-bottom: 50PX;
-    /* padding-right: 70Px; */
-    margin-left: 80px;
     color: var(--VeryDarkDesaturatedBlue);
     font-weight: 900;
     
@@ -155,55 +153,55 @@ main{
     margin-bottom: 70PX;
     font-family: barlow;
     line-height: 1.5;
-    margin-left: 80px;
     color: var(--DarkGrayishBlue);
-    /* margin: 30px 10px; */
 }
 .transform-unit > div > a{
-    margin-left: 80px;
-    padding-top: 30px;
+    /* margin-left: 80px; */
+    /* padding-top: 30px; */
     color: var(--VeryDarkDesaturatedBlue);
     font-family: fraunces;
     font-weight: 700;
     text-decoration: none;
     text-transform: uppercase;
-    position: absolute;
+    /* position: absolute; */
   
 }
-.transform-unit > div > a > hr{
+.red-line{
   width: 130px;
   background-color: var(--SoftRed);
   height: 5px;
   position: relative;
   bottom: 5px;
    border: none;
-   opacity: 0.4;
+   opacity: 0.3;
 }
-.transform-unit > div > a > hr:hover{
+.red-line:hover{
     opacity: 1;
+    cursor: pointer;
 }
 
 .standout-unit > div > a{
-    margin-left: 80px;
-    padding-top: 30px;
+
     color: var(--VeryDarkDesaturatedBlue);
     font-family: fraunces;
     font-weight: 700;
     text-decoration: none;
     text-transform: uppercase;
-    position: absolute;
 }
-.standout-unit > div > a > hr{
+.yellow-line{
+    z-index: 0;
     width: 130px;
     background-color: var(--Yellow);
     height: 5px;
     position: relative;
     bottom: 5px;
      border: none;
-     opacity: 0.4;
+     opacity: 0.3;
   }
-  .standout-unit > div > a > hr:hover{
+  .yellow-line:hover{
+    cursor: pointer;
       opacity: 1;
+      z-index: 2;
   }
   
   .transform-image{
@@ -232,11 +230,9 @@ main{
 }
 .graphic-unit > div> p, .photography-unit > div > p{
     font-family: barlow;
-    padding-bottom: 50px;
-    padding-right: 70px;
-    padding-left: 70px;
     line-height: 1.5;
-    margin: 0 30px;
+    padding: 0  80px  10px 80px;
+    margin: 5px 0 50px 0 ;
 }
 .photography-unit{
     background-image: url("./images/desktop/image-photography.jpg");
@@ -255,6 +251,12 @@ main{
     }
     .transform-unit{
         text-align: center;
+    }
+    .red-line{
+        margin: 0 auto;
+    }
+    .yellow-line{
+        margin: 0 auto;
     }
     .standout-unit{
         text-align: center;
@@ -280,7 +282,7 @@ main{
 section{
     background-color: #fff;
     text-align: center;
-    padding: 40px
+    padding: 30px
 }
 section > h2{
     padding-top: 40px;
@@ -290,7 +292,7 @@ section > h2{
     opacity: .7;
 }
 .testimonial-container{
-    padding: 30px 40px 30px 40px;
+    padding: 30px 40px;
     display: flex;
     gap: 20px;
 
@@ -298,6 +300,7 @@ section > h2{
 .client-image{
     border-radius: 50%;
     width: 100px;
+    margin-top: 5px;
 }
 .client-words{
     margin-top: 40px;
@@ -402,3 +405,4 @@ ion-icon:hover{
     color: var(--White);
     cursor: pointer;
 }
+
