@@ -23,6 +23,7 @@ body{
     font-family: 'Barlow', sans-serif;
 font-family: 'Fraunces', serif;
 width: 100%;
+overflow-x: hidden;
 }
 header{
     background: url("images/desktop/image-header.jpg");
@@ -118,7 +119,7 @@ header > h2{
     .nav-items{
       background-color: var(--White);
       height: 220px;
-      width: 400px;
+      width: 300px;
       justify-self: center;
       margin-right: 40px;
       margin-top: 10px;
