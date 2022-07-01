@@ -16,8 +16,7 @@
 *{
     box-sizing: border-box;
     margin: 0;
- 
-    
+   
 }
 body{
     font-size: 18PX;
@@ -43,7 +42,7 @@ nav{
     margin-bottom: 7rem;
 }
 nav >img{
-    margin-left: 20px;
+    margin-left: 30px;
 }
 .nav-items{
     margin-left: auto;
@@ -83,6 +82,9 @@ nav >img{
 }
 .hambuger-icon{
     display: none;
+    position: absolute;
+        right: 10px;
+    cursor: pointer;
 }
 
 header > h2{
@@ -102,27 +104,47 @@ header > h2{
 .arrow{
     align-self: center;
     margin-top: 40PX;
+    cursor: pointer;
 }
 
 /*mobile view styling */
 @media (max-width: 600px) {
-    .hambuger-icon{
-        display: block;
-        position: absolute;
-        top: 42px;
-        right: 50px;
+    nav{
+        flex-direction: column;
+    }
+    nav >img{
+        align-self: flex-start;
     }
     .nav-items{
-        display: none;
-        background-color: #fff;
-        width: 80px;
-        
+      background-color: var(--White);
+      height: 220px;
+      width: 400px;
+      justify-self: center;
+      margin-right: 40px;
+      margin-top: 10px;
+      display: none;
     }
-    
+    .nav-items > ul{
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .nav-items >ul >li {
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    .nav-links{
+        color: var(--VeryDarkGrayishBlue);
+    }
     .active{
-        background-color: var(--Yellow);
-    }
+        background-color: yellow;
+        margin-top: 10px;
 
+    }
+    .hambuger-icon{
+        display: block;
+
+    }
 }
 
 /* main styling */
@@ -292,7 +314,7 @@ section > h2{
     opacity: .7;
 }
 .testimonial-container{
-    /* padding: 30px 40px; */
+    padding: 30px 40px;
     display: flex;
     gap: 20px;
 
