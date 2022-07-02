@@ -396,12 +396,13 @@ footer{
     background-color: rgb(101, 230, 204);
     text-align: center;
     padding: 40px;
-    /* padding-bottom: 50px; */
 }
 footer >h2{
     padding-top: 40px;
-   font-family: Barlow;
-   font-weight: 700;
+   font-family: fraunces;
+   font-weight: 900;
+   font-size: 30px;
+   color: hsl(167, 40%, 24%);
 }
 footer > ul{
     margin-top: 30px;
