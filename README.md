@@ -43,7 +43,7 @@ Users should be able to:
 - CSS custom properties
 - Flexbox
 - CSS Grid
--Javacsript
+- Javacsript
 
 
 ### What I learned
